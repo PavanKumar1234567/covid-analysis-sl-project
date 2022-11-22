@@ -1,0 +1,15 @@
+\chapter{Description}
+	This project aims in finding the top3 most effected countries over the globe based on cumulative cases and deaths gathered from the dataset.
+\section{Preprocessing data}
+The initial data set contains lots of null values and data across all countries , to remove the rows which contains more null values we have used bash tools AWK and SED which are best suitable for handling csv files.
+Now using the python scripts we have read the data into list of lists and perfomed manipulations to construct cumulative cases and deaths columns , then sorted this list based on number of deaths and extracted the top 3 countries
+\section{Visualisations and Description}
+First graph was a cumulative line plot of 3 lines corresponding to 3 countries.
+Covid Pandemic stayed around 2 years,so we divide it into 4 parts[Jan 2020-Jun2020,July2020-Dec2020,Jan2021-June2021,July2021-Dec2021] and plotted 3 pie plots corresponding to 3 countries to find which time period has most covid cases.\\
+The bar graph shows percentage of male and female deaths of USA and Brazil. \\
+All of this graphs were inserted in a html web page for the high level frontend view.\\
+The other half of this project focuses on covid affect in India where we apply similar techniques used above to find the top 3 most affected states due to covid.\\
+Then we examine the four time periods of these 2 years pandemic period to find which time period has caused the most number of deaths due to covid using the pie plots plotted for 3 states differently and see if same time period has caused most number of deaths across countries .
+\section{Concepts used from the course}
+AWK and SED from bash,lambda function to sort list of lists,manipulations on list of lists,csv module usage,plotting lineplots,barplots,pieplots using pyplot,latex to generate this report,HTML and CSS for basic frontend to insert and display the graphs.
+

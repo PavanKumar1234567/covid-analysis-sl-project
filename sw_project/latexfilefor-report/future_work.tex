@@ -1,0 +1,26 @@
+\chapter{Possible future work Pending}
+    we have observed that there are more cases in the year 2021 compared to 2020 in
+ worldwide as well as india wide,we want to analyse why this change has happend,like because of no lockdown,health issues or climate change etc.And we also wish to find what 
+are the precautions we need to take inorder to overcome this kind of pandemics.We can also analyse from least 3 countries which suffered less from covid and educate other countries to defend the pandemic.Countries with huge population needs this to be done.
+
+\section{High level Documentation}
+ Major part of the code was written in a single python script with name covidanaysis.py.As this file takes 3 csv files as inputs we have hardcoded the paths in code for simplicity.\\
+ This code functionalities have broadly 3 parts\\ 
+ 1.Preprocessing part\\
+ 2.Global data analysis part\\
+ 3.India data analysis part \\
+ Preprocessing part reads the file "WHO-COVID-19-global-data.csv" which is a raw data of all countries so we read the data into list of lists,and sorted this data in ascending order based on the number of cases.From this sorted data we took last 3 countries as they are most affected countries and written this data into anothar csv file called top3data.csv.\\
+ The global data analysis part reads "top3data.csv" into list of lists and it has code which generates cumulative line graph,then 3 piecharts corresponding to 3 countries.Here we also plotted one bar graph for male females deaths data which was read from "top3malefemale.csv",this file was preprocesed from other csv file called Dataset-historic.csv using sed,awk scripts.\\
+ In India data analysis part we read "covid19india.csv" into list of lists and grouped the data by statename then sorted it based on the date.From this we created 3 lists each containing data of 3 states and plotted the cumulative line graph,3 pie plots corresponding to each state as done with the countries.\\
+ Directory Structure\\
+ -------awkscript.awk\\
+ ------preprocessing.sh\\
+ ------covid-analysis.py\\
+ ------(allinput .csv files)\\
+ -------graphsimagesand-html---------covid-webpage.html(also graph images)\\
+ -------latexfilefor-report--------(latex file for report pdf generation)\\
+ -------projectreport.pdf\\
+\section{compilation/running instructions}
+As all the input files have been hardcoded we can simply run the following command which will generate 9 graph images as output.\\
+"python3 covidanalysis.py" \\with above directory structure mentioned.
+Also in folder graphsimages-html we can open covid-webpage.html which will display all the above generated graphs in a web page abstracting out the inner details with description written for each graph
